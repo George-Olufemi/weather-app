@@ -69,9 +69,9 @@ const Container = styled.div`
   height: 100vh;
   width: 100vw;
   background-image: url('/pexels-instawalli-165754.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 `
 
 const Video = styled.video`
