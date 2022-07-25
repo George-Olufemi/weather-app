@@ -114,6 +114,7 @@ const Header = styled.h1`
   font-size: 35px;
   line-height: 43px;
   color: #FFFFFF;
+  font-family: 'Montserrat';
 `
 
 const HeaderText = styled.p`
@@ -124,6 +125,7 @@ const HeaderText = styled.p`
   line-height: 32px;
   color: #FFFFFF;
   margin-bottom: 48px;
+  font-family: 'Montserrat';
 `
 
 const Search = styled.div`
