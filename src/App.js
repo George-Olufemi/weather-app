@@ -114,7 +114,6 @@ const Header = styled.h1`
   font-size: 35px;
   line-height: 43px;
   color: #FFFFFF;
-  font-family: 'system-ui, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif';
 `
 
 const HeaderText = styled.p`
@@ -125,7 +124,6 @@ const HeaderText = styled.p`
   line-height: 32px;
   color: #FFFFFF;
   margin-bottom: 48px;
-  font-family: 'Montserrat';
 `
 
 const Search = styled.div`
