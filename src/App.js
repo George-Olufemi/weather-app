@@ -114,7 +114,7 @@ const Header = styled.h1`
   font-size: 35px;
   line-height: 43px;
   color: #FFFFFF;
-  font-family: 'Montserrat';
+  font-family: 'system-ui, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif';
 `
 
 const HeaderText = styled.p`
