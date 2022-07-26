@@ -5,16 +5,24 @@ import axios from 'axios';
 export default function App() {
   const [weather, setWeather] = useState({});
   const [location, setLocation] = useState("");
-  //const url = process.env.REACT_APP_WEATHER_API_UNUSED
-  const url = `https://api.weatherapi.com/v1/current.json?key=4948b55018534a019c853425222307&q=${location}&aqi=no`
+
+  const processFunc = (url, apiKey, params) => {
+    if (url){
+      return `${url}?key=${apiKey}&q=${location}&${{...params}}`;
+    }
+    return null;
+  }
+  const url = process.env.REACT_APP_WEATHER_API
+  const key = process.env.REACT_APP_API_KEY 
+  const params = `q=${location}&aqi=no12`;
+
   const searchLocation = (event) => {
     if(event.key === 'Enter') {
-      axios.get(url)
+      axios.get(processFunc(url, key, params))
       .then((response) => {
         setWeather(response.data)
         //console.log(response.data)
       })
-      setLocation('')
     }
   }
   return (
@@ -36,7 +44,7 @@ export default function App() {
             />
           </InputBox>
           <Button>
-            <ButtonText onClick={searchLocation}>Go</ButtonText>
+            <ButtonText onClick={setLocation}>Go</ButtonText>
           </Button>
         </Search>
         {/*  */}
