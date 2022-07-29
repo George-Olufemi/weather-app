@@ -1,10 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 
 export default function App() {
   const [weather, setWeather] = useState({});
   const [location, setLocation] = useState("");
+
+  useEffect(() => {
+    if(location === "") {
+      setWeather({})
+    }
+  }, [weather, location])
 
   const processFunc = (url, apiKey, params) => {
     if (url){
